@@ -1109,8 +1109,8 @@ pub struct _cef_settings_t {
     pub command_line_args_disabled: ::std::os::raw::c_int,
     #[doc = ""]
     pub cache_path: cef_string_t,
-    #[doc = ""]
-    pub root_cache_path: cef_string_t,
+    // #[doc = ""]
+    // pub root_cache_path: cef_string_t,
     #[doc = ""]
     pub user_data_path: cef_string_t,
     #[doc = ""]
@@ -1147,8 +1147,8 @@ pub struct _cef_settings_t {
     pub background_color: cef_color_t,
     #[doc = ""]
     pub accept_language_list: cef_string_t,
-    #[doc = ""]
-    pub application_client_id_for_file_scanning: cef_string_t,
+    // #[doc = ""]
+    // pub application_client_id_for_file_scanning: cef_string_t,
 }
 #[test]
 fn bindgen_test_layout__cef_settings_t() {
@@ -13978,7 +13978,7 @@ extern "C" {
         client: *mut _cef_client_t,
         url: *const cef_string_t,
         settings: *const _cef_browser_settings_t,
-        extra_info: *mut _cef_dictionary_value_t,
+        // extra_info: *mut _cef_dictionary_value_t,
         request_context: *mut _cef_request_context_t,
     ) -> *mut cef_browser_t;
 }
@@ -16881,7 +16881,7 @@ pub struct _cef_render_process_handler_t {
         unsafe extern "C" fn(
             self_: *mut _cef_render_process_handler_t,
             browser: *mut _cef_browser_t,
-            frame: *mut _cef_frame_t,
+            // frame: *mut _cef_frame_t,
             source_process: cef_process_id_t,
             message: *mut _cef_process_message_t,
         ) -> ::std::os::raw::c_int,
@@ -21207,7 +21207,7 @@ pub struct _cef_life_span_handler_t {
             windowInfo: *mut _cef_window_info_t,
             client: *mut *mut _cef_client_t,
             settings: *mut _cef_browser_settings_t,
-            extra_info: *mut *mut _cef_dictionary_value_t,
+            // extra_info: *mut *mut _cef_dictionary_value_t,
             no_javascript_access: *mut ::std::os::raw::c_int,
         ) -> ::std::os::raw::c_int,
     >,
@@ -22687,7 +22687,7 @@ pub struct _cef_client_t {
         unsafe extern "C" fn(
             self_: *mut _cef_client_t,
             browser: *mut _cef_browser_t,
-            frame: *mut _cef_frame_t,
+            // frame: *mut _cef_frame_t,
             source_process: cef_process_id_t,
             message: *mut _cef_process_message_t,
         ) -> ::std::os::raw::c_int,

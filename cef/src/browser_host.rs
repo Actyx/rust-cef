@@ -55,19 +55,13 @@ impl BrowserHost {
     }
 
     pub fn get_window_handle(&self) -> CefWindowHandle {
-        if let Some(func) = self.ptr.as_ref().get_window_handle {
-            unsafe { func(self.ptr.get()) }
-        } else {
-            CefWindowHandle::default()
-        }
+        let func = self.ptr.as_ref().get_window_handle.unwrap();
+        unsafe { func(self.ptr.get()) }
     }
 
     pub fn get_opener_window_handle(&self) -> CefWindowHandle {
-        if let Some(func) = self.ptr.as_ref().get_opener_window_handle {
-            unsafe { func(self.ptr.get()) }
-        } else {
-            CefWindowHandle::default()
-        }
+        let func = self.ptr.as_ref().get_opener_window_handle.unwrap();
+         unsafe { func(self.ptr.get()) }
     }
 
     pub fn has_view(&self) -> bool {
